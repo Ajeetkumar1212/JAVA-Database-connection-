@@ -1,0 +1,80 @@
+Polymorphism
+1 thing in many form
+One person with deffrent behavior
+2 type
+1-method overloading (comple time)
+2-run time (Daynamic binding) method overriding 
+ ######overloading -3 type##########
+1-method overloading
+2-constactor overloading
+3-oparator overloading
+1-----------
+A class contain with same method name but diffr in paramater
+A class contain more than one method with same name but deffrent in parameter
+class A
+{
+void m1(int a)
+void m2(int a,int b)
+}or
+{
+void m2(int a)
+void m2(char a)
+} 
+#################################################
+public class polymorphism(Method overloading )
+{
+    void m1(int a)
+    {
+        System.out.println("M1");
+    }
+     void m1(int a,int b)
+    {
+        System.out.println("M2");
+    }
+      void m1(char a)
+    {
+        System.out.println("M3");
+    }
+      public static void main(String arg[])
+      {
+         polymorphism p=new polymorphism();
+         p.m1(2);
+         p.m1(2,3);
+         p.m1('a');
+      }
+  ########################################################
+constractor overloading
+class Test
+{
+Test(int a)
+{
+System.out.println("1 parametr");
+}
+Test(int a,int b)
+{
+System.out.println("2 parametr");
+}
+###########################################################
+Java Dosen't support oprater overloading
+Overiding
+#############################################################3
+class Test
+{
+void m1()
+{
+ System.out.print("A");
+}
+class B extends Test 
+{
+void m1()
+{
+ System.out.print("B");
+}
+public static void main(String arg[])
+{
+new B.m1();
+}
+}
+}
+
+}

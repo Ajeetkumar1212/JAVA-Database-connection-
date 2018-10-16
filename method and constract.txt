@@ -1,0 +1,282 @@
+class Test{
+void m1()//instace method
+{
+System.out.println("M1 method");
+}
+static void m2()  //static method
+{
+System.out.println("M2 method");
+}
+public static void main(String arg[])
+{
+Test t=new Test();
+t.m1();
+Test.m2();
+}
+}
+}
+output:M1 method ,M2 method
+
+
+
+________________________________________________________________________________
+2)
+class Test{
+void m1(int a,String b)//instace method
+{
+System.out.println("M1 method");
+}
+static void m2(double d)  //static method
+{
+System.out.println("M2 method");
+}
+public static void main(String arg[])
+{
+Test t=new Test();
+t.m1(1,"Amit");
+Test.m2(12.0);
+}
+}
+}
+output:M1 method 1, Amit
+    M2 method    12.0
+_______________________________________________________________________________________
+3)
+class X {}
+class emp{}
+class Y{}
+Student{}
+class Test{
+void m1(X x,emp e)//instace method
+{
+System.out.println("M1 method");
+}
+static void m2(Y y,Student s)  //static method
+{
+System.out.println("M2 method");
+}
+public static void main(String arg[])
+{
+Test t=new Test();
+t.m1(x,e);
+Test.m2(y,s);
+}
+}
+}
+output:M1 method 
+       M2 method
+___________________________________________________________________________________
+4) 2 method with same signature not allowed
+class Test
+{
+void m1()//void is complsare
+{
+System.out.prinln("A");
+}
+void m1()
+{
+System.out.prinln("B");
+}
+public static void main(String arg[])
+{
+Test t=new Test();
+t.m1();
+t.m1();
+output:method m1() is already defined in class Test
+    void m1()
+         ^
+-------------------------------------------------------------------------------------------
+5)
+A Single method can call all the methods alone
+Or 
+method calling (multiple method calling one time )
+class Test
+{
+void m1()
+{
+m2();                         ///Here 1st m2() excute then m1()
+System.out.println("A");
+}
+void m2()
+{
+m3(3);                       ////Here 1st m3() excute then m2()
+System.out.println("B");
+}
+void m3(int x)
+{
+System.out.println("C");
+}
+public static void main(String arg[])
+{
+Test t=new Test();
+t.m1();
+}
+}
+}
+output:::C
+output:::B
+output:::A
+_________________________________________________________________________________________________________
+Using This Key-word to reprsent instance variable
+Class Test
+int a=100;
+int b=100;
+{
+void add(int a,int b)
+{
+System.out.println(a+b);//2+2=4
+System.out.println(this.a+this.b);//100+100=200
+}
+public static void main(String arg[])
+{
+Test t=new Test();
+t.add(2,2);
+}
+}
+}
+////Entire Java in static area This key-word is not allowed/////////////////
+////Java not support operator overloading////////////////////////////
+In Java Method Return type is mindatry ///////////
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+public class Test
+{
+   
+ int m1()
+   
+ {
+       
+ System.out.println("A");
+      
+  return 0;
+  
+  }
+    
+public static void main(String arg[])
+   
+ {
+      
+  Test t=new Test();
+      
+  int x=t.m1();
+       
+ System.out.println(x);
+   
+ }
+
+}
+    
+
+
+=+===================================================================================================================================================================
+CONSTRACTOR'S IN JAVA
+=======================
+=======================
+type of creating object's in java
+1):New Keyword
+2):Instance factory method
+3):Static factry method
+4);Pattern factory method
+5):clone method
+6):serialization method
+7):New instance method
+
+Object:::
+class Test
+{
+Test t=new Test();
+Test---->class name
+t   ----->Refreance variable(obj-name)
+=   ----->assigment oprator
+Test(); --->Constractor
+
+RULE'S:::
+a)::::Constractor name same as class name
+b)::::constractor able to take parametor
+c)::::Const. not allowed return type
+
+
+Type of constractor ::
+1-Default constractor (Gentrate by comilor)
+2-Parametrize constractor
+1------------------------------------------
+class Test
+{
+void m1()
+{
+System.out.println("A");
+}
+//Defult
+Test()
+{
+   ///Empaty body
+}
+public static void main(String arg[])
+{
+Test t=new Test();
+t.m();
+}
+}
+}
+2-----------------------------------------
+comilation error
+class Test
+{
+Test(int a)
+{
+System.out.println("A");
+}
+public static void main(String arg[])
+{
+Test t=new Test();
+Test t1=new Test(3);
+3--------------------------------------------------
+class emp
+{
+int id;
+{
+emp()
+{
+id=1;
+}
+void display()
+{
+System.out.println(id);
+}
+public static void main(String arg[])
+{
+emp e=new emp();
+e.display();
+emp e1=new emp();
+e1.display();
+}
+}
+}
+output::
+Give 2 value's:- 1 1
+
+4-------------------------------------------------------------
+class emp
+{
+int id;
+emp(int i)//local variable declared
+{
+
+}
+void display()
+{
+System.out.println(id);
+}
+public static void main(String arg[])
+{
+emp e=new emp();
+e.display();
+}
+}
+}
+output: 0
+5===================================================================
+conversion of local var into instance var by using this key word
+class A
+{
+int a=10;
+

@@ -1,0 +1,74 @@
+1):write a program to print frst non repeated char of a string?
+//Index method
+String s="AABBC";
+for(char c:s.toCharArray())
+{
+if(s.indexof(c)==s.lastindexof(s))
+{
+S.O.P(c);
+}
+}
+output:C
+/\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+wap to remove the given char from the string?
+String a="ajeet";
+System.out.println(charRemoveAt(a,4));
+}
+public static String charRemoveAt(String a,int p)
+{
+return s.substring(0,p)+s.substring(p+1);
+}
+
+
+WAP to reverse a string Input->Welcome to India Output-> India to Welcome  
+String s = " I live in India";
+String[] split = s.split(" ");
+String result = "";
+for (int i = split.length - 1; i >= 0; i--) {
+  result += (split[i] + " ");
+}
+System.out.println(result.trim());
+______________________________________________________________________
+WAP to remove consecutive chars accoring to the following Input 1-> aaaaabbcccccccc Input 2-> 2 Output aabbcc 
+ublic class StringTest{
+public static void main(String[] args){
+
+    String s ="aaabbbbccccccdd";
+    String result="";
+    StringBuilder sb = new StringBuilder(s);
+
+
+    while(sb.length() != 0){
+        int count = 0;
+        char test = sb.charAt(0);
+        while(sb.indexOf(test+"") != -1){
+            sb.deleteCharAt(sb.indexOf(test+""));
+            count++;
+        }
+        //System.out.println(test+" is repeated "+count+" number of times");
+        result=result+test+count;
+    }
+    System.out.println(result);         
+}
+} 
+_______________________________________________________________________________________________
+WAP to count occurence of each character in a string
+WAP to find sum of 2 largest no in the array without using any inbuilt function  
+WAP to introduce # after occurence of every 7 characters in the string  
+ find missing number in an array,
+
+ what is exception and their types.
+ ***Find even and odd number without using /*%
+int a=10;
+if((a&1)==0)
+{
+System.out.println("even");
+
+
+}else
+{
+System.out.println("odd");
+
+}
+output:Even
